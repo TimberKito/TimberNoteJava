@@ -16,5 +16,6 @@ public class NotesFragment extends BaseFragment {
     @Override
     void initView() {
         super.initView();
+        init
     }
 }
