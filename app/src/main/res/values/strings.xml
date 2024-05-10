@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TimberNoteJava</string>
+
+    <string name="main_note">Notes</string>
+    <string name="main_task">Task</string>
+    <string name="main_info">Info</string>
+
+</resources>
