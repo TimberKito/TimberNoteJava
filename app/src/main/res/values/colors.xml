@@ -6,4 +6,14 @@
     <color name="blue">#80BFEFFF</color>
     <color name="pink">#FFE4E1</color>
     <color name="grey">#1A000000</color>
+
+
+
+    <color name="color_D9E8FC">#D9E8FC</color>
+    <color name="color_F7DEE3">#F7DEE3</color>
+    <color name="color_EFE9F7">#EFE9F7</color>
+    <color name="color_DAF6E4">#DAF6E4</color>
+    <color name="color_FDEBAB">#FDEBAB</color>
+    <color name="color_F7F6D4">#F7F6D4</color>
+    <color name="color_EFEEF0">#EFEEF0</color>
 </resources>

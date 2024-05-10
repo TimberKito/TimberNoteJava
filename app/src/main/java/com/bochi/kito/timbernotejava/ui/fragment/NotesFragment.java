@@ -16,6 +16,10 @@ public class NotesFragment extends BaseFragment {
     @Override
     void initView() {
         super.initView();
-        init
+        initRecycler();
+    }
+
+    private void initRecycler() {
+//        binding.notesRecyclerView
     }
 }
