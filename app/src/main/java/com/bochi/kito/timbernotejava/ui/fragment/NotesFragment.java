@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
@@ -103,8 +104,14 @@ public class NotesFragment extends BaseFragment {
         });
 
         RecyclerView notesRecyclerView = binding.notesRecyclerView;
-        notesRecyclerView.setLayoutManager(new StaggeredGridLayoutManager
-                (2, StaggeredGridLayoutManager.VERTICAL));
+//        notesRecyclerView.setLayoutManager(new StaggeredGridLayoutManager
+//                (2, StaggeredGridLayoutManager.VERTICAL));
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        notesRecyclerView.setLayoutManager(layoutManager);
+
+
         notesRecyclerView.setAdapter(adapter);
         notesRecyclerView.addItemDecoration(new SpacingItemDecoration(6));
     }

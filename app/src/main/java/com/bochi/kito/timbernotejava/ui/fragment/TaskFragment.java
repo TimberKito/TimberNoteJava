@@ -4,7 +4,7 @@ import android.view.View;
 
 import com.bochi.kito.timbernotejava.databinding.FragmentTaskBinding;
 
-public class TaskFragment extends BaseFragment {
+public class TaskFragment extends BaseFragment implements View.OnClickListener {
     private FragmentTaskBinding binding;
 
     @Override
@@ -16,5 +16,17 @@ public class TaskFragment extends BaseFragment {
     @Override
     void initView() {
         super.initView();
+        initButton();
+    }
+
+    private void initButton() {
+        binding.taskAdd.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == binding.taskAdd) {
+
+        }
     }
 }

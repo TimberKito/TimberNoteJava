@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_task_layout"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <TextView
+        android:id="@+id/item_task_date"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/shape_notes_black"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/color_222222"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/shape_notes_black"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintLeft_toRightOf="@id/item_task_date"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/item_task_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/item_task_switch"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_222222" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/item_task_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:thumb="@drawable/selector_switch"
+            app:track="@drawable/selector_switch_button" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

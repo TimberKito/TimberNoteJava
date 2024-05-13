@@ -60,8 +60,6 @@ public class EditNoteActivity extends BaseActivity implements View.OnClickListen
             binding.editContent.setText(notes.getContent());
             binding.editLayout.setBackground(getApplicationContext().getDrawable(notesBgColor[notes.getColor()]));
         }
-
-
     }
 
     private void initSelectColors() {
