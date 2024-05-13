@@ -1,5 +1,6 @@
 package com.bochi.kito.timbernotejava.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,7 +18,9 @@ import com.bochi.kito.timbernotejava.data.db.DBHelper;
 import com.bochi.kito.timbernotejava.data.db.NotesDatabase;
 import com.bochi.kito.timbernotejava.data.entity.Notes;
 import com.bochi.kito.timbernotejava.databinding.FragmentNotesBinding;
+import com.bochi.kito.timbernotejava.tools.AppConstString;
 import com.bochi.kito.timbernotejava.tools.SpacingItemDecoration;
+import com.bochi.kito.timbernotejava.ui.activity.EditNoteActivity;
 import com.bochi.kito.timbernotejava.ui.adapter.NotesAdapter;
 import com.bochi.kito.timbernotejava.ui.listener.ClickActionListener;
 
@@ -109,24 +112,16 @@ public class NotesFragment extends BaseFragment {
     private void action(int type, Notes notes) {
         switch (type) {
             case 0: {
-                Notes notes1 = new Notes();
-                notes1.setTitle("66666666666");
-                notes1.setContent("123123");
-                notes1.setColor(3);
-                DBHelper.INSTANCE.insertNote(notes1);
-                Log.e("onClick", "has been click 0");
+                Intent intent = new Intent(requireActivity(), EditNoteActivity.class);
+                intent.putExtra(AppConstString.EDIT_TYPE_KEY, 0);
+                startActivity(intent);
                 break;
             }
             case 1: {
-
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        DBHelper.INSTANCE.getNotesDatabase().noteDao().deleteAllNotes();
-                    }
-                }).start();
-
-                Log.e("onClick", "has been click 1");
+                Intent intent = new Intent(requireActivity(), EditNoteActivity.class);
+                intent.putExtra(AppConstString.EXTRA_KEY, notes);
+                intent.putExtra(AppConstString.EDIT_TYPE_KEY, 1);
+                startActivity(intent);
                 break;
             }
         }

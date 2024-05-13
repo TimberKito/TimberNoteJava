@@ -75,6 +75,6 @@ object DBHelper {
                 .deleteTask(task)
         }
     }
-
+    
 
 }

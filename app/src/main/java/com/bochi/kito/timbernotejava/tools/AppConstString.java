@@ -14,4 +14,7 @@ public class AppConstString {
     public static final String DATE_LONG_FORMAT_NEW = "dd/MM/yyyy HH:mm";
     public static final String IS_FIRST_NOTE = "is_first_note";
     public static final String IS_FIRST_TASK = "is_first_task";
+
+    public static final String EXTRA_KEY = "note";
+    public static final String EDIT_TYPE_KEY = "type_key";
 }

@@ -18,15 +18,16 @@ public class Notes implements Serializable {
 
     private int color;
 
-    //    protected Notes(Parcel in) {
-//        id = in.readInt();
-//        title = in.readString();
-//        content = in.readString();
-//        color = in.readInt();
-//    }
-    public Notes() {
-
+    public Notes(String title, String content, int color) {
+        this.title = title;
+        this.content = content;
+        this.color = color;
     }
+
+
+    public Notes() {
+    }
+
 
     public int getColor() {
         return color;
