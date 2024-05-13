@@ -1,5 +1,6 @@
 package com.bochi.kito.timbernotejava.data.db
 
+import androidx.lifecycle.MutableLiveData
 import androidx.room.Room
 import com.bochi.kito.timbernotejava.App
 import com.bochi.kito.timbernotejava.data.entity.Notes
@@ -24,6 +25,13 @@ object DBHelper {
             close()
         }
     }
+//
+//    fun getAllNote(): MutableLiveData<List<Notes>> {
+//        CoroutineScope(Dispatchers.IO).launch {
+//            notesDatabase.noteDao().getAllNotes()
+//        }
+//        return
+//    }
 
     fun insertNote(note: Notes) {
         CoroutineScope(Dispatchers.IO).launch {
@@ -67,5 +75,6 @@ object DBHelper {
                 .deleteTask(task)
         }
     }
+
 
 }

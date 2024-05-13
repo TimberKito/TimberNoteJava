@@ -11,8 +11,6 @@ import com.bochi.kito.timbernotejava.App;
 import com.bochi.kito.timbernotejava.R;
 import com.bochi.kito.timbernotejava.databinding.FragmentInfoBinding;
 
-import lombok.val;
-
 public class InfoFragment extends BaseFragment implements View.OnClickListener {
     private FragmentInfoBinding binding;
 

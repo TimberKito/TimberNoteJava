@@ -5,14 +5,13 @@ import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import com.bochi.kito.timbernotejava.tools.DateTools;
 
-import lombok.Data;
-
 @Entity(tableName = "t_task")
-@Data
 public class Task implements Parcelable {
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String content;
     private Long dateLong;
@@ -21,6 +20,73 @@ public class Task implements Parcelable {
     private Integer hour;
     private Integer minute;
     private Long systemTimeL;
+
+    public Task() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public Long getDateLong() {
+        return dateLong;
+    }
+
+    public void setDateLong(Long dateLong) {
+        this.dateLong = dateLong;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public Boolean getOpen() {
+        return isOpen;
+    }
+
+    public void setOpen(Boolean open) {
+        isOpen = open;
+    }
+
+    public Integer getHour() {
+        return hour;
+    }
+
+    public void setHour(Integer hour) {
+        this.hour = hour;
+    }
+
+    public Integer getMinute() {
+        return minute;
+    }
+
+    public void setMinute(Integer minute) {
+        this.minute = minute;
+    }
+
+    public Long getSystemTimeL() {
+        return systemTimeL;
+    }
+
+    public void setSystemTimeL(Long systemTimeL) {
+        this.systemTimeL = systemTimeL;
+    }
 
     protected Task(Parcel in) {
         id = in.readInt();

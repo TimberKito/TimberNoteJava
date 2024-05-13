@@ -28,6 +28,6 @@ public interface NotesDao {
     void deleteAllNotes();
 
     @Query("SELECT * FROM t_notes ORDER BY id DESC")
-    Flow<List<Notes>> getAllNotes();
+    List<Notes> getAllNotes();
 
 }

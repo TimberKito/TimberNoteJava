@@ -6,14 +6,15 @@
     <group>
         <clip-path android:pathData="M0,0h40v40h-40z" />
         <path
-            android:fillColor="#ffffff"
+            android:fillColor="@color/theme_color"
             android:pathData="M20,20m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0" />
         <path
             android:fillColor="#00000000"
             android:pathData="M20,14V20M20,20V26M20,20H26M20,20L14,20"
             android:strokeWidth="2"
-            android:strokeColor="#000000"
+            android:strokeColor="@color/white"
             android:strokeLineCap="round"
             android:strokeLineJoin="round" />
     </group>
 </vector>
+
