@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TimberNoteJava</string>
+    <string name="app_name">Timber Notes</string>
 
     <string name="main_note">Notes</string>
     <string name="main_task">Task</string>

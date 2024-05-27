@@ -5,22 +5,22 @@ plugins {
 }
 
 android {
-    namespace 'com.bochi.kito.timbernotejava'
+    namespace 'com.bochi.kito.timbernotes'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.bochi.kito.timbernotejava"
+        applicationId "com.bochi.kito.timbernotes.test"
         minSdk 22
         targetSdk 34
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
